@@ -5,13 +5,15 @@
 #
 # This source code is licensed under the BSD-style license found in the
 # LICENSE file in the root directory of this source tree.
-
 import os
 import sys
 
 import torch
 
 from console_lib import GoConsoleGTP
+from config import config_for_import
+
+config_for_import()
 from rlpytorch import Evaluator, load_env
 
 
