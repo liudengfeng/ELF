@@ -2,6 +2,5 @@
     "cmake.configureSettings": {
         "CMAKE_TOOLCHAIN_FILE": "C:/src/vcpkg/scripts/buildsystems/vcpkg.cmake",
         "PYTHON_EXECUTABLE": "C:/Users/ldf19/anaconda3/envs/elf/python.exe"
-    },
-    "python.pythonPath": "C:/Users/ldf19/anaconda3/envs/elf/python.exe"
+    }
 }
