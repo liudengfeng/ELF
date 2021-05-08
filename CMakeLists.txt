@@ -8,16 +8,15 @@ project(elfgames_go)
 find_package(Threads)
 
 # 处理json包
-include(FetchContent)
-FetchContent_Declare(json
-    GIT_REPOSITORY https://gitee.com/mirrors/JSON-for-Modern-CPP.git   #gitee加速
-    GIT_TAG develop
-)
+# include(FetchContent)
+# FetchContent_Declare(json
+#     GIT_REPOSITORY https://gitee.com/mirrors/JSON-for-Modern-CPP.git   #gitee加速
+#     GIT_TAG develop
+# )
 
-FetchContent_MakeAvailable(json)
+# FetchContent_MakeAvailable(json)
 
-# 添加支持gtest
-include(GoogleTest)
+
 # vcpkg包管理第三方包
 find_package(TBB CONFIG REQUIRED)
 find_package(GTest CONFIG REQUIRED)
@@ -25,8 +24,11 @@ find_package(pybind11 CONFIG REQUIRED)
 find_package(fmt CONFIG REQUIRED)
 find_package(spdlog CONFIG REQUIRED)
 find_package(unofficial-concurrentqueue CONFIG REQUIRED)
-# find_package(nlohmann_json CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
 find_package(cppzmq CONFIG REQUIRED)
+
+# 添加支持gtest
+include(GoogleTest)
 
 # Sanity checks
 
@@ -56,8 +58,8 @@ endif()
 
 set(CMAKE_CXX_STANDARD 17)
 set(PYBIND11_CPP_STANDARD -std=c++17)
-set(CMAKE_CXX_FLAGS
-    "${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra -Wno-register -Wno-deprecated-declarations -fPIC -march=native")
+# set(CMAKE_CXX_FLAGS
+#    "${CMAKE_CXX_FLAGS} -fPIC -march=native")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)

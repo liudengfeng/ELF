@@ -19,12 +19,11 @@ namespace logging {
 
 class Levels {
  public:
-  // 静态成员为所有对象共享
   static constexpr int INVALID = 127; // hack, but guaranteed to fit any enum
 
   static void registerPy(pybind11::module& m);
 
-  static spdlog::level::level_enum from_str(const char* str){
+  static spdlog::level::level_enum from_str(const char* str) {
     std::string s(str);
     return spdlog::level::from_str(s);
   }

@@ -25,7 +25,7 @@ Testing/
 pachi-*/
 experimental/patterns.prob
 experimental/patterns.spat
-tutorial/
 data/
 *.log
 scripts/elfgames/go/myserver/
+.vs/
