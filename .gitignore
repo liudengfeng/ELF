@@ -11,7 +11,7 @@ __pycache__/
 # Random junk
 *.sw?
 *.db
-*.json
+# *.json
 *.swo
 *.tree
 .codemod.bookmark
@@ -26,7 +26,6 @@ pachi-*/
 experimental/patterns.prob
 experimental/patterns.spat
 tutorial/
-c20/
 data/
 *.log
 scripts/elfgames/go/myserver/

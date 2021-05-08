@@ -10,6 +10,7 @@
 
 #include <memory.h>
 #include <stdio.h>
+#include <cstring>
 #include "common.h"
 
 // 19x19 only
