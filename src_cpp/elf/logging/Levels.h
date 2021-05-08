@@ -25,12 +25,11 @@ class Levels {
   static void registerPy(pybind11::module& m);
 
   static spdlog::level::level_enum from_str(const char* str){
-    auto s = str;
+    std::string s(str);
     return spdlog::level::from_str(s);
   }
 
   static spdlog::level::level_enum from_str(const std::string& str) {
-    // return from_str(str.c_str());
     return spdlog::level::from_str(str);
   }
 };

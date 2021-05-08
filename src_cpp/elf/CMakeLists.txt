@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
 project(elf)
 
-# find_package(unofficial-concurrentqueue CONFIG REQUIRED)
+find_package(pybind11 CONFIG REQUIRED)
+find_package(cppzmq CONFIG REQUIRED)
 
 # Source files
 
@@ -40,6 +41,7 @@ target_link_libraries(elf PUBLIC
     # ${TBB_IMPORTED_TARGETS}
     TBB::tbb
     fmt::fmt
+    cppzmq cppzmq-static
 )
 # target_link_libraries(elf PUBLIC
 #     #${Boost_LIBRARIES}
